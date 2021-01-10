@@ -6,23 +6,24 @@ server <- function(input, output) {
     # have elapsed
     invalidateLater(as.integer(1000))
     
-    format(now(tzone = "Turkey"), format = "%H:%M:%S")
+    format(now(), format = "%H:%M:%S")
     
   })
   
   tab_upcoming <- reactive({
     invalidateLater(as.integer(60000))
-    format((now(tzone = "Turkey") + 1800), format = "%H:%M")
+    format((now() + 1800), format = "%H:%M")
   })
   
   tab_Racing1 <- reactive({
     invalidateLater(as.integer(60000))
-    format((now(tzone = "Turkey") - 300), format = "%H:%M")  })
+    format((now() - 300), format = "%H:%M")  })
   
   tab_Racing2 <- reactive({
     invalidateLater(as.integer(60000))
-    format((now(tzone = "Turkey") + 300), format = "%H:%M")  })
-  
+    format((now() + 300), format = "%H:%M")  })
+    #format((now(tzone = "GMT+10") + 300), format = "%H:%M")  })
+
   
   #now(tzone = 'Australia/Sydney')
   

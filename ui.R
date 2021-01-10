@@ -22,7 +22,7 @@ ui <- dashboardPagePlus(
   
   
   body = dashboardBody(
-    fluidRow(column(8,box(title = "BoxTitle1", status = "success", solidHeader = TRUE,width = 12,
+    fluidRow(column(8,box(title = "Race Timetable", status = "success", solidHeader = TRUE,width = 12,
                           collapsible = FALSE,DT::dataTableOutput("racetable"))))
     
   )
